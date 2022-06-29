@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 from typing import List
 
-from setuptools import find_packages
 from setuptools import setup
+
+# Any annotated var fails, if before the used requirements var
+foobar: List[str] = []
 
 # packages to setup
 requirements = []
@@ -13,5 +15,5 @@ setup(
     description="foobar-example",
     url="https://github.com/Callek/foobar-example",
     license="Unlicense",
-    requirements=requirements,
+    install_requires=requirements,
 )
